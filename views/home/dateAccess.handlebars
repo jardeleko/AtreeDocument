@@ -1,0 +1,454 @@
+{{#each rgs}}
+    {{#if message}} 
+    {{else}}
+<section class="container container-rg"><!-- formularios em geral -->  	
+<h3 class="text-justify" id='rg'>Validação RG</h3><br />	
+<div class="card">
+    <br>
+    <div class="card-body bg-transparent">
+    <form method="POST" action="/validaterg/{{id}}?_method=PUT">
+        <input type="hidden" name="_method" value="PUT"/>
+        <fieldset class="panel panel-group">
+            <div id="panel" class="panel panel-default no-padding">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="form-group row">
+                            <label for="nomeRg" class="col-sm-2 col-form-label">Nome</label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="nomeRg" name="nomeRg" size="50" value="{{nameRg}}">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="paiRg" class="col-sm-2 col-form-label"> Filiação Pai </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="paiRg" name="paiRg" size="50" value="{{paiRg}}">
+                            </div>
+                        </div>	      			        
+                        <div class="form-group row">
+                            <label for="maeRg" class="col-sm-2 col-form-label">  Filiação Mãe </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="maeRg" name="maeRg" size="50" value="{{maeRg}}">
+                            </div>
+                        </div>	        
+                        <br>
+                        <br>
+                        <br>       
+                        <div class="form-row">
+                            <div class="col-md-3 mb-3">
+                                <label for="nascRg">Data de Nascimento</label>
+                                <input type="date" class="form-control" id="nascRg" name="nascRg" value="{{nascRg}}">
+                            </div> 
+                            <div class="col-md-3 mb-3">
+                                <label for="expedRg">Data de Expedição</label>
+                                <input type="date" class="form-control" id="expedRg" name="expedRg" value="{{ExpRg}}">
+                                
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="orgRg">Orgão de Expedição</label>
+                                <input type="text" class="form-control" id="orgRg" name="orgRg" value="{{orgExpRg}}" >
+                            </div>	          			
+                            <br>
+                            <br>
+                            <br>
+                            <div class="col-md-5 mb-3">
+                                <label for="cidadeRg">Cidade Natal</label>
+                                <input type="text" class="form-control" name="cidadeRg" id="cidadeRg" value="{{cityRg}}">
+                                Cidade natal/naturalidade
+                            </div>
+
+                            <div class="col-md-2 mb-2">
+                                <label for="ufRg">UF</label>
+                                <input type="text" class="form-control" id="ufRg" name="ufRg" value="{{ufRg}}">
+                            </div> 
+                            
+
+                            <div class="col-md-2 mb-2">
+                                <label for="numRg">RG</label>
+                                <input type="text" class="form-control" id="numRg" name="numRg" value="{{rg}}">
+                            </div>
+
+                        </div>    
+                    </div>
+                    <figure class="img-thumbanail">
+                        <img src="../../uploads/{{imgRg}}" width="600" height="400"class="img-thambnail" alt="Imagem do RG">
+                        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                    </figure>
+                    <img src="" alt="Imagem do RG" class="img-thumbnail">
+                    <div class="form-group row">
+                        <div class="col-md-9">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="imgRg" id="imgRg" lang="pt-br" value="{{imgRg}}">
+                                    <label class="custom-file-label" for="imgRg">Imagem do RG</label>
+                            </div>
+                        </div>
+                    </div>         
+                    <br>    
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Retorno de Requisição</label>
+                        <textarea class="form-control" id="message" name="messageRg" value="{{message}}" rows="3"></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="submit" name="validate" class="btn btn-success mb-2" value="Success">
+                        <input type="submit" name="feed" class="btn btn-danger mb-2" value="Feedback">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </fieldset>
+        </form>
+        </div>
+        </div>
+    </div>		
+    </section>
+    <br>
+    <br>
+    {{/if}}
+{{/each}}
+
+{{#each cnhs}}
+    {{#if message}} 
+    {{else}}
+<section class="container container-rg"> 	
+<h3 class="text-justify" id='cnh'>Validação CNH</h3><br />	
+<div class="card">
+    <br>
+    <div class="card-body bg-transparent">
+    <form method="POST" action="/validatecnh/{{id}}?_method=PUT">
+        <input type="hidden" name="_method" value="PUT"/>
+        <fieldset class="panel panel-group">
+            <div id="panel" class="panel panel-default no-padding" >
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="form-group row">
+                            <label for="nomeCnh" class="col-sm-2 col-form-label"> Nome </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="nomeCnh" name="nomeCnh" size="50" value="{{nameCnh}}">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="paiCnh" class="col-sm-2 col-form-label"> Filiação Pai </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="paiCnh" name="paiCnh" size="50" value="{{paiCnh}}">
+                            </div>
+                        </div>	      			        
+                        <div class="form-group row">
+                            <label for="maeCnh" class="col-sm-2 col-form-label">  Filiação Mãe </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="maeCnh" name="maeCnh" size="50" value="{{maeCnh}}">
+                            </div>
+                        </div>	        
+                        <br>
+                        <br>
+                        <br>        
+                        <div class="form-row">
+                            <div class="col-md-3 mb-3">
+                                <label for="dateNasc">Data de Nascimento</label>
+                                <input type="date" class="form-control" id="dateNasc" name="dateNasc" value="{{nascCnh}}">
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="habp">1ª Habilitação</label>
+                                <input type="date" class="form-control" id="habp" name="habp" value="{{firstCnh}}">   
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validCnh">Validade</label>
+                                <input type="date" class="form-control" id="validCnh" name="validCnh" value="{{validatCnh}}">
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="registCnh">Nº Registro</label>
+                                <input type="text" class="form-control" id="registCnh" name="registCnh" value="{{numbCnh}}">          
+                            </div>	          			
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="col-md-3 mb-3">
+                                <label for="cpfCnh">CPF</label>
+                                <input type="text" class="form-control" name="cpfCnh" id="cpfCnh" value="{{cpfCnh}}">
+                            </div>    
+                            <div class="col-md-2 mb-2">
+                                <label for="rgCnh">RG</label>
+                                <input type="text" class="form-control" id="rgCnh" name="rgCnh" value="{{rgCnh}}">
+                            </div>
+                               <div class="col-md-3 mb-3">
+                                <label for="orgCnh">Orgão de Expedição</label>
+                                <input type="text" class="form-control" id="orgCnh" name="orgCnh" value="{{orgExpCnh}}"> 
+                            </div>
+                            <div class="col-md-2 mb-2">
+                                <label for="ufCnh">UF</label>
+                                <input type="text" class="form-control" id="ufCnh" name="ufCnh" value="{{ufCnh}}">
+                            </div> 
+                            <div class="col-md-2 mb-2">
+                                <label for="categ">Cat. Hab.</label>
+                                <input type="text" class="form-control" id="categ" name="categ" value="{{categCnh}}">
+                            </div>
+                        </div>    
+                    </div>
+                    <figure class="img-thumbanail">
+                        <img src="../../uploads/{{imgCnh}}" width="600" height="400"class="img-thambnail" alt="Imagem da carteira de motorista">
+                        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                    </figure>
+                    <div class="form-group row">
+                        <div class="col-md-9">
+                            <div class="custom-file">
+                                <input type="file" name="imgCnh" id="imgCnh" class="custom-file-input" lang="pt-br">
+                                    <label class="custom-file-label" for="imgCnh">Imagem da CNH</label>
+                            </div>
+                        </div>
+                    </div>
+                <br><br>
+                    <div class="form-group">
+                       <label for="exampleFormControlTextarea1">Retorno de requisição</label>
+                        <textarea class="form-control" id="message" name="messageCnh" value="{{message}}" rows="3"></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="submit" name="validate" class="btn btn-success mb-2" value="Success">
+                        <input type="submit" name="error_docs" class="btn btn-danger mb-2" value="Feedback">
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+    </div>
+</div>		
+</section>
+<br>
+<br>
+<br>
+    {{/if}}
+{{/each}}
+
+{{#each cpfs}}
+    {{#if message}} 
+    {{else}}
+<section class="container container-cpf">
+<h3 class="text-justify" id='cpf'> Validação de CPF </h3><br />
+   <div class="card">
+    <div class="card-body bg-transparent">		
+    <form method="POST" action="/validatecpf/{{id}}?_method=PUT">
+        <input type="hidden" name="_method" value="PUT"/>    
+        <fieldset class="panel panel-group">
+            <div id="panel" class="panel panel-default no-padding" >
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="form-group row">
+                            <label for="nomeCpf" class="col-sm-2 col-form-label"> Nome </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="nomeCpf" name="nomeCpf" size="50" value="{{nameCpf}}">
+                            </div>
+                        </div>
+                        <br>
+                        <br>	
+                        <div class="form-group row">	
+                            <div class="col-md-3 mb-3">
+                                <label for="cpf">Número de Inscrição</label>
+                                <input type="text" class="form-control" id="cpf" name="cpf" value="{{cpf}}">
+                                </div>
+                    
+                            <div class="col-md-3 mb-3">
+                                <label for="nascCpf">Data de nascimento</label>
+                                <input type="date" name="nascCpf"  class="form-control" id="nascCpf" value="{{nascCpf}}">
+                            </div>
+
+                        </div>    
+                    </div>
+                    <figure class="img-thumbanail">
+                        <img src="../../uploads/{{imgCpf}}" width="600" height="400"class="img-thambnail" alt="Imagem do CPF">
+                        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                    </figure>
+                    <div class="form-group row">
+                        <div class="col-md-9">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="imgCpf" id="imgCpf" value="{{imgCpf}}" lang="pt-br">
+                                    <label class="custom-file-label" for="imgCpf">Imagem do CPF</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Retorno de Requisição</label>
+                        <textarea class="form-control" id="message" value="{{message}}" name="messageCpf" rows="3"></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="submit" name="validate" class="btn btn-success mb-2" value="Success">
+                        <input type="submit" name="error_docs" class="btn btn-danger mb-2" value="Feedback">
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+    </div>
+</div>		
+</section>
+<br>
+<br>
+    {{/if}}
+{{/each}}
+
+{{#each ctps}}
+    {{#if message}} 
+    {{else}}
+<br>
+<br>
+<section class="container container-ps-trab"> 		
+<h3 class="text-justify" id="ctps"> Validação Previdência Social</h3><br />
+<div class="card">
+    <div class="card-body bg-transparent">
+         <fieldset class="panel panel-group">
+        <form method="POST" action="/validatectps/{{id}}?_method=PUT">
+         <input type="hidden" name="_method" value="PUT"/>
+            <div id="panel" class="panel panel-default no-padding" >
+                <div class="panel-body">
+                    <div class="form-group">
+    
+                        <div class="form-group row">
+                            <label for="nomeCtps" class="col-sm-2 col-form-label"> Nome </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="nomeCtps" name="nomeCtps" size="50" value="{{nameCtps}}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">	
+                            <div class="col-md-3 mb-3">
+                                <label for="pis">PIS/PASEP</label>
+                                <input type="text" class="form-control" id="pis" name="pis" value="{{pis}}">
+                            </div>
+
+                            <div class="col-md-2 mb-2">
+                                <label for="numCtps">Número</label>
+                                <input type="text" class="form-control" id="numCtps" name="numCtps" value="{{numberCtps}}">
+                            </div>
+                            
+
+                            <div class="col-md-2 mb-2">
+                                <label for="serie">Série</label>
+                                <input type="text" class="form-control" id="serie" name="serie" value="{{serieCtps}}">
+                            </div>
+
+                            <div class="col-md-2 mb-2">
+                                <label for="ufCtps">UF</label>
+                                <input type="text" class="form-control" id="ufCtps" name="ufCtps" value="{{ufCtps}}">
+                                
+                                </div>
+                            
+                    
+                        </div>    
+                    </div>
+                    <figure class="img-thumbanail">
+                        <img src="../../uploads/{{imgCtps}}" width="600" height="400"class="img-thambnail" alt="Imagem da carteira de trabalho">
+                        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                    </figure>
+                    <div class="form-group row">
+                        <div class="col-md-9">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="imgCtps" id="imgCtps" value="{{imgCtps}}" lang="pt-br">
+                                    <label class="custom-file-label" for="imgCtps">Carteira de Trabalho</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Retorno de Requisição</label>
+                        <textarea class="form-control" id="message" value="{{message}}" name="messageCtps" rows="3"></textarea>
+                    </div>                    
+                    </div>     
+                    <div class="button">
+                        <input type="submit" name="validate" class="btn btn-success mb-2" value="Success">
+                        <input type="submit" name="error_docs" class="btn btn-danger mb-2" value="Feedback">
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+    </div>
+</div>		
+</section>
+<br>
+<br>
+<br>
+    {{/if}}
+{{/each}}
+
+{{#each rms}}
+    {{#if message}} 
+    {{else}}
+    <br>		
+</section>
+<section class="container container-ps-trab">
+<h3 class="text-justify" id="rm"> Validação Reserva Militar</h3><br />  	
+<div class="card">
+    <div class="card-body bg-transparent">	
+    <form method="POST" action="/validaterm/{{id}}?_method=PUT">
+    <input type="hidden" name="_method" value="PUT"/>
+        <fieldset class="panel panel-group">
+            <div id="panel" class="panel panel-default no-padding" >
+                <div class="panel-body">
+                    <div class="form-group">
+    
+                        <div class="form-group row">
+                            <label for="nomeRm" class="col-sm-2 col-form-label"> Nome </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="nomeRm" name="nomeRm" size="50" value="{{nameRm}}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-2 mb-2">
+                                <label for="numRm">Número</label>
+                                <input type="text" class="form-control" id="numRm" name="numRm" value="{{numberRm}}" >
+                            </div>
+                            
+
+                            <div class="col-md-2 mb-2">
+                                <label for="serieRm">Série</label>
+                                <input type="text" class="form-control" id="serieRm" name="serieRm" value="{{serieRm}}" >
+                            </div>
+
+                            <div class="col-md-2 mb-2">
+                                <label for="ra">RA</label>
+                                <input type="text" class="form-control" id="ra" name="ra" value="{{raRm}}">
+                            </div>
+                        </div>
+                    <figure class="img-thumbanail">
+                        <img src="../../uploads/{{imgRm}}" width="600" height="400"class="img-thambnail" alt="Imagem da reserva militar">
+                        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                    </figure>
+                    <div class="form-group row">
+                        <div class="col-md-9">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="imgRm" id="imgRm" value="{{imgRm}}" lang="pt-br">
+                                    <label class="custom-file-label" for="imgRm">Imagem da reserva militar</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br> 
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Retorno de Requisição</label>
+                        <textarea class="form-control" id="messageRm" name="messageRm" value="{{message}}" rows="3"></textarea>
+                    </div>                    
+                    <br>
+                    <br>
+                    <div>
+                    <div class="button">
+                        <input type="submit" name="validate" class="btn btn-success mb-2" value="Success">
+                        <input type="submit" name="error_docs" class="btn btn-danger mb-2" value="Feedback">
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+    </div>
+</div>		
+</section>
+<br>
+<br>
+<br>
+ <br><br><br>
+    {{/if}} 
+{{/each}}

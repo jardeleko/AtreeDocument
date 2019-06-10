@@ -1,0 +1,412 @@
+<br><br><br>
+{{#each errorRg}}
+<div class="alert alert-danger">{{message}}</div>
+{{else}}
+{{/each}}
+{{#each errorCnh}}
+<div class="alert alert-danger">{{message}}</div>
+{{else}}
+{{/each}}
+{{#each errorCpf}}
+<div class="alert alert-danger">{{message}}</div>
+{{else}}
+{{/each}}
+{{#each errorCtps}}
+<div class="alert alert-danger">{{message}}</div>
+{{else}}
+{{/each}}
+{{#each errorRm}}
+<div class="alert alert-danger">{{message}}</div>
+{{else}}
+{{/each}}
+
+<center>
+    <figure>
+        <img src="./img/main.jpg" class="img-fluid">
+    </figure>
+</center>
+<br><br><br>
+
+<section class="container container-rg"><!-- formularios em geral -->  	
+<h3 class="text-justify" id='rg'>Validação RG</h3><br />	
+<div class="card">
+    <br>
+    <div class="card-body bg-transparent">
+    <form action="/postrg" method="POST" enctype="multipart/form-data">
+        <fieldset class="panel panel-group">
+            <div id="panel" class="panel panel-default no-padding">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="form-group row">
+                            <label for="nomeRg" class="col-sm-2 col-form-label">Nome</label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="nomeRg" name="nomeRg" size="50" placeholder="Nome completo">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="paiRg" class="col-sm-2 col-form-label"> Filiação Pai </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="paiRg" name="paiRg" size="50" placeholder="Nome do pai">
+                            </div>
+                        </div>	      			        
+                        <div class="form-group row">
+                            <label for="maeRg" class="col-sm-2 col-form-label">  Filiação Mãe </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="maeRg" name="maeRg" size="50" placeholder="Nome da mãe">
+                            </div>
+                        </div>	        
+                        <br>
+                        <br>
+                        <br>       
+                        <div class="form-row">
+                            <div class="col-md-3 mb-3">
+                                <label for="nascRg">Data de Nascimento</label>
+                                <input type="date" class="form-control" name="nascRg" id="nascRg" placeholder="login" name="nascRg" aria-describedby="inputGroupPrepend2">
+                            </div> 
+                            <div class="col-md-3 mb-3">
+                                <label for="expedRg">Data de Expedição</label>
+                                <input type="date" class="form-control" id="expedRg" placeholder="login" name="expedRg" aria-describedby="inputGroupPrepend2">
+                                
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="orgRg">Orgão de Expedição</label>
+                                <input type="text" class="form-control" id="orgRg" placeholder="SSP" name="orgRg" aria-describedby="inputGroupPrepend2">
+                            </div>	          			
+                            <br>
+                            <br>
+                            <br>
+                            <div class="col-md-5 mb-3">
+                                <label for="cidadeRg">Cidade Natal</label>
+                                <input type="text" class="form-control" name="cidadeRg" id="cidadeRg" placeholder="Cidade Natal" >
+                                Cidade natal/naturalidade
+                            </div>
+
+                            <div class="col-md-2 mb-2">
+                                <label for="ufRg">UF</label>
+                                <input type="text" class="form-control" id="ufRg" name="ufRg" placeholder="SC">
+                            </div> 
+                            
+
+                            <div class="col-md-2 mb-2">
+                                <label for="numRg">RG</label>
+                                <input type="text" class="form-control" id="numRg" name="numRg" placeholder="6416644" >
+                            </div>
+
+                        </div>    
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-9">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="imgRg" id="imgRg" lang="pt-br">
+                                    <label class="custom-file-label" for="imgRg">Imagem do RG</label>
+                                    Se o documento possuir foto, tire uma foto em que aparece seu rosto
+                            </div>
+                        </div>
+                    </div>         
+                    <br>
+                    <br>
+                    <br>
+                    <div>
+                            <button type="submit" name="postrg" class="btn btn-primary mb-2">Validar Documento</button>
+                    </div>
+
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+</div>		
+</section>
+<br>
+<br>
+<br>
+
+<section class="container container-rg"> 	
+<h3 class="text-justify" id='cnh'>Validação CNH</h3><br />	
+<div class="card">
+    <br>
+    <div class="card-body bg-transparent">
+    <form action="/postcnh" method="POST" enctype="multipart/form-data">
+        <fieldset class="panel panel-group">
+            <div id="panel" class="panel panel-default no-padding" >
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="form-group row">
+                            <label for="nomeCnh" class="col-sm-2 col-form-label"> Nome </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="nomeCnh" name="nomeCnh" size="50" placeholder="Nome completo">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="paiCnh" class="col-sm-2 col-form-label"> Filiação Pai </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="paiCnh" name="paiCnh" size="50" placeholder="Nome do pai">
+                            </div>
+                        </div>	      			        
+                        <div class="form-group row">
+                            <label for="maeCnh" class="col-sm-2 col-form-label">  Filiação Mãe </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="maeCnh" name="maeCnh" size="50" placeholder="Nome da mãe">
+                            </div>
+                        </div>	        
+                        <br>
+                        <br>
+                        <br>        
+                        <div class="form-row">
+                            <div class="col-md-3 mb-3">
+                                <label for="dateNasc">Data de Nascimento</label>
+                                <input type="date" class="form-control" id="dateNasc" placeholder="login" name="dateNasc" aria-describedby="inputGroupPrepend2">
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="habp">1ª Habilitação</label>
+                                <input type="date" class="form-control" id="habp" placeholder="login" name="habp" aria-describedby="inputGroupPrepend2">   
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validCnh">Validade</label>
+                                <input type="date" class="form-control" id="validCnh" placeholder="login" name="validCnh" aria-describedby="inputGroupPrepend2">
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="registCnh">Nº Registro</label>
+                                <input type="text" class="form-control" id="registCnh" placeholder="05078592070" name="registCnh" aria-describedby="inputGroupPrepend2">          
+                            </div>	          			
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="col-md-3 mb-3">
+                                <label for="cpfCnh">CPF</label>
+                                <input type="text" class="form-control" name="cpfCnh" id="cpfCnh" placeholder="028.378.080-07">
+                            </div>    
+                            <div class="col-md-2 mb-2">
+                                <label for="rgCnh">RG</label>
+                                <input type="text" class="form-control" id="rgCnh" name="rgCnh" placeholder="6416644">
+                            </div>
+                               <div class="col-md-3 mb-3">
+                                <label for="orgCnh">Orgão de Expedição</label>
+                                <input type="text" class="form-control" id="orgCnh" placeholder="SSP" name="orgCnh" aria-describedby="inputGroupPrepsend2"> 
+                            </div>
+                            <div class="col-md-2 mb-2">
+                                <label for="ufCnh">UF</label>
+                                <input type="text" class="form-control" id="ufCnh" name="ufCnh" placeholder="SC">
+                            </div> 
+                            <div class="col-md-2 mb-2">
+                                <label for="categ">Cat. Hab.</label>
+                                <input type="text" class="form-control" id="categ" name="categ" placeholder="A/B/AB">
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-9">
+                            <div class="custom-file">
+                                <input type="file" name="imgCnh" id="imgCnh" class="custom-file-input" lang="pt-br">
+                                    <label class="custom-file-label" for="imgCnh">Imagem da CNH</label>
+                                    Se o documento possuir foto, tire uma foto em que aparece seu rosto
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div>
+                        <button type="submit" name="postcnh" class="btn btn-primary mb-2">Validar Documento</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+</div>		
+</section>
+<br>
+<br>
+<br>
+<section class="container container-cpf">
+<h3 class="text-justify" id='cpf'> Validação de CPF </h3><br />
+   <div class="card">
+    <div class="card-body bg-transparent">		
+    <form action="/postcpf" method="POST" enctype="multipart/form-data">
+        <fieldset class="panel panel-group">
+
+            <div id="panel" class="panel panel-default no-padding" >
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="form-group row">
+                            <label for="nomeCpf" class="col-sm-2 col-form-label"> Nome </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="nomeCpf" name="nomeCpf" size="50" placeholder="Nome completo">
+                            </div>
+                        </div>
+                        <br>
+                        <br>	
+                        <div class="form-group row">	
+                            <div class="col-md-3 mb-3">
+                                <label for="cpf">Número de Inscrição</label>
+                                <input type="text" class="form-control" id="cpf" name="cpf" placeholder="028.378.080-07" >
+                                </div>
+                    
+                            <div class="col-md-3 mb-3">
+                                <label for="nascCpf">Data de nascimento</label>
+                                <input type="date" name="nascCpf"  class="form-control" id="nascCpf">
+                            </div>
+
+                        </div>    
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-md-9">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="imgCpf" id="imgCpf" lang="pt-br">
+                                    <label class="custom-file-label" for="imgCpf">Imagem do CPF</label>
+                                    Se o documento possuir foto, tire uma foto em que aparece seu rosto
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div>
+                            <button type="submit" name="postcpf" class="btn btn-primary mb-2">Validar Documento</button>
+                    </div>
+
+                </div>
+            </div>
+      </fieldset>
+</form>
+</div>
+</div>		
+</section>
+<br>
+<br>
+<br>
+<section class="container container-ps-trab"> 		
+<h3 class="text-justify" id="ctps"> Validação Previdência Social</h3><br />
+<div class="card">
+    <div class="card-body bg-transparent">
+    <form action="/postctps" method="POST" enctype="multipart/form-data">
+        <fieldset class="panel panel-group">
+
+            <div id="panel" class="panel panel-default no-padding" >
+                <div class="panel-body">
+                    <div class="form-group">
+    
+                        <div class="form-group row">
+                            <label for="nomeCtps" class="col-sm-2 col-form-label"> Nome </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="nomeCtps" name="nomeCtps" size="50" placeholder="Nome completo">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">	
+                            <div class="col-md-3 mb-3">
+                                <label for="pis">PIS/PASEP</label>
+                                <input type="text" class="form-control" id="pis" name="pis" placeholder="101-0293029312-89" >
+                            </div>
+
+                            <div class="col-md-2 mb-2">
+                                <label for="numCtps">Número</label>
+                                <input type="text" class="form-control" id="numCtps" name="numCtps" placeholder="3452258" >
+                            </div>
+                            
+
+                            <div class="col-md-2 mb-2">
+                                <label for="serie">Série</label>
+                                <input type="text" class="form-control" id="serie" name="serie" placeholder="0016" >
+                            </div>
+
+                            <div class="col-md-2 mb-2">
+                                <label for="ufCtps">UF</label>
+                                <input type="text" class="form-control" id="ufCtps" name="ufCtps" placeholder="SC" >
+                                
+                                </div>
+                            
+                    
+                        </div>    
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-md-9">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="imgCtps" id="imgCtps" lang="pt-br">
+                                    <label class="custom-file-label" for="imgCtps">Carteira de Trabalho</label>
+                                   Se o documento possuir foto, tire uma foto em que aparece seu rosto
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div>
+                            <button type="submit" name="enviar-cpf" class="btn btn-primary mb-2">Validar Documento</button>
+                    </div>
+
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+</div>
+<br>
+<br>
+<br>		
+</section>
+<section class="container container-ps-trab">
+<h3 class="text-justify" id="rm"> Validação Reserva Militar</h3><br />  	
+<div class="card">
+    <div class="card-body bg-transparent">	
+    <form action="/postrm" method="POST" enctype="multipart/form-data">
+        <fieldset class="panel panel-group">
+            <div id="panel" class="panel panel-default no-padding" >
+                <div class="panel-body">
+                    <div class="form-group">
+    
+                        <div class="form-group row">
+                            <label for="nomeRm" class="col-sm-2 col-form-label"> Nome </label>
+                                <div class="col-sm-7">
+                                <input type="text" class="form-control" id="nomeRm" name="nomeRm" size="50" placeholder="Nome completo">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-2 mb-2">
+                                <label for="numRm">Número</label>
+                                <input type="text" class="form-control" id="numRm" name="numRm" placeholder="3452258" >
+                            </div>
+                            
+
+                            <div class="col-md-2 mb-2">
+                                <label for="serieRm">Série</label>
+                                <input type="text" class="form-control" id="serieRm" name="serieRm" placeholder="0016" >
+                            </div>
+
+                            <div class="col-md-2 mb-2">
+                                <label for="ra">RA</label>
+                                <input type="text" class="form-control" id="ra" name="ra" placeholder="12039213710" >
+                            </div>
+                        </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-md-9">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="imgRm" id="imgRm" lang="pt-br">
+                                    <label class="custom-file-label" for="imgRm">Imagem da reserva militar</label>
+                                    Se o documento possuir foto, tire uma foto em que aparece seu rosto
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div>
+                        <button type="submit" name="enviar-cpf" class="btn btn-primary mb-2">Validar Documento</button>
+                    </div>
+
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+</div>
+</section>
+ <br>
+ <br><br><br>
+

@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Atπee Document Validation</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Início <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/terms">Termos e condições</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tipos de Dados
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/#rg">RG</a>
+          <a class="dropdown-item" href="/#cnh">CNH</a>
+          <a class="dropdown-item" href="/#cpf">CPF</a>
+          <a class="dropdown-item" href="/#ctps">CTPS</a>
+           <a class="dropdown-item" href="/#rm">Certificado de Reservista</a>
+          
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/date">Requisições</a>
+          
+        </div>
+        {{#if user.iAdmin}}
+          <li class="nav-item">
+            <a class="nav-link" href="/dateRequest" tabindex="-1" aria-disabled="true">Requisições</a>
+          </li>
+        {{else}}
+        {{/if}}
+     
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-3">
+      <ul class="navbar-nav mr-auto"> 
+        {{#if user}}
+       <li class="nav-item">
+          <a class="nav-link" href="/logout" tabindex="-1" aria-disabled="true">Sair</a> 
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/log" tabindex="-1" aria-disabled="true">Entrar</a> 
+        </li>
+      </ul>       
+	{{/if}}
+    </form>  
+     <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto">
+        <li>
+          <a class="nav-link" href="/create" tabindex="-1" aria-disabled="true">Criar conta</a>
+        </li>
+      </ul>
+    </form>
+  </div>
+</nav>

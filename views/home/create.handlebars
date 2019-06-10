@@ -1,0 +1,64 @@
+	<!-- DADOS DE LOGIN -->
+	<br><br><br>
+	{{#each erros}}
+	<div class="alert alert-danger">{{message}}</div>
+	{{else}}
+	{{/each}}
+<h3 class="text-justify">Cadastre-se</h3><br />
+<div class="card">
+    <div class="card-body bg-transparent">
+	<form action="/add" method="POST"> 
+	<fieldset class="panel panel-group">
+		<br>
+		<div id="panel" class="panel panel-default no-padding" >
+			<div class="panel-body">
+				<div class="form-group">
+					<div class="form-group row">
+						<label for="name_sign" class="col-sm-2 col-form-label"> Nome </label>
+								<div class="col-sm-7">
+							<input type="text" class="form-control" id="name_sign" autocomplete="additional-name" name="name_sign" size="50" placeholder="Nome completo">
+						</div>
+						</div>
+
+					<div class="form-group row">
+						<label for="email_sign" class="col-sm-2 col-form-label">Email</label>
+						<div class="col-sm-7">
+							<input type="email" class="form-control" id="email_sign" autocomplete="on" placeholder="Email" name="email_sign" placeholder="nome@dominio">
+						</div>
+						</div>
+
+					<br>
+					<br>
+					
+					<div class="form-group row">
+						<div class="col-md-3 mb-3">
+							<label for="user_sign">Username</label>
+							<input type="text" class="form-control" id="user_sign" placeholder="login" name="user_sign" aria-describedby="inputGroupPrepend2">
+							
+					</div>
+
+					<div class="col-md-3 mb-3">
+						<label for="pass_sign">Password</label>
+						<input type="password" class="form-control" id="pass_sign" placeholder="Senha" name="pass_sign">
+					</div>
+		
+						<div class="col-md-3 mb-3">
+						<label for="pas_sign2">Confirm</label>
+						<input type="password" class="form-control" id="pass_sign2" name="pass_sign2" placeholder="Digite novamente">
+					</div>
+				</div>
+					<br>
+				<br>
+					<br>
+				<br>
+				<div class="text-justify">
+					<button type="submit" name="createSend" class="btn btn-primary">Enviar</button>
+					<button type="reset" name="limpar" class="btn btn-primary">Limpar campos</button>
+				</div>
+			</div>
+			</div>
+		</fieldset>
+	</form>
+	</div>
+</div>
+<br><br><b><br>

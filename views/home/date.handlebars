@@ -1,0 +1,131 @@
+
+{{#each rgs}}
+<div class="container">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Retorno</th>
+      <th scope="col">Status </th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{nameRg}}</td>
+      <td>RG</td>
+      <td>{{message}}</td>
+      <td><form method="post" action="/deleterg/{{id}}?_method=DELETE">
+      <input type="hidden" name="_method" value="DELETE"/>{{buttonDate documentValid}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+{{/each}}
+
+{{#each cnhs}}
+<div class="container">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Retorno</th>
+      <th scope="col">Status </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{nameCnh}}</td>
+      <td>CNH</td>
+      <td>{{message}}</td>
+      <td><form method="post" action="/deletecnh/{{id}}?_method=DELETE">
+      <input type="hidden" name="_method" value="DELETE" />{{buttonDate documentValid}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+{{/each}}
+
+{{#each cpfs}}
+<div class="container">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Retorno</th>
+      <th scope="col">Status </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{nameCpf}}</td>
+      <td>CPF</td>
+      <td>{{message}}</td>
+      <td> <form method="post" action="/deletecpf/{{id}}?_method=DELETE">
+      <input type="hidden" name="_method" value="delete" />{{buttonDate documentValid}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+{{/each}}
+
+{{#each ctps}}
+<div class="container">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Retorno</th>
+      <th scope="col">Status </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{nameCtps}}</td>
+      <td>CTPS</td>
+      <td>{{message}}</td>
+      <td><form method="post" action="/deletectps/{{id}}?_method=DELETE">
+      <input type="hidden" name="_method" value="delete" />{{buttonDate documentValid}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+{{/each}}
+
+{{#each rms}}
+<div class="container">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Retorno</th>
+      <th scope="col">Status </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{nameRm}}</td>
+      <td>CPF</td>
+      <td>{{message}}</td>
+      <td><form method="post" action="/deleterm/{{id}}?_method=DELETE">
+      <input type="hidden" name="_method" value="delete" />{{buttonDate documentValid}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+{{/each}}
