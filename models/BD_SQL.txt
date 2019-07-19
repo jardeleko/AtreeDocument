@@ -1,0 +1,76 @@
+CREATE TABLE Users(
+	id INTEGER AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(255) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	user VARCHAR(255) NOT NULL,
+	passw VARCHAR(255) NOT NULL,
+	iAdmin VARCHAR(255) NOT NULL
+)
+CREATE TABLE Cnh( 
+	nameCnh VARCHAR(255), 
+	paiCnh VARCHAR(255), 
+	maeCnh VARCHAR(255), 
+	nascCnh DATE, 
+	firstCnh DATE, 
+	validatCnh DATE,
+	numbCnh INTEGER, 
+	cpfCnh VARCHAR(255),
+	rgCnh VARCHAR(255),
+	orgExpCnh CHAR(12), 
+	ufCnh CHAR(11), 
+	categCnh CHAR(5), 
+	imgCnh VARCHAR(255), 
+	idUser INTEGER, 
+	idCategory INTEGER, 
+	documentValid INTEGER, 
+	message VARCHAR(255) 
+)
+CREATE TABLE Rg(
+    nameRg VARCHAR(255),
+    paiRg VARCHAR(255),
+    maeRg VARCHAR(255),
+    nascRg DATE,
+    ExpRg DATE,
+    orgExpRg CHAR(10),
+    ufRg CHAR(11),
+    rg INTEGER,
+    imgRg VARCHAR(255),
+    idUser INTEGER,	
+    cityRg VARCHAR(255),
+	idCategory INTEGER, 
+	documentValid INTEGER, 
+	message VARCHAR(255) 
+)
+CREATE TABLE Cpf(
+	nameCpf VARCHAR(255),
+	cpf VARCHAR(255),
+	nascCpf DATE,
+	imgCpf VARCHAR(255),
+	idUser INTEGER(11),
+	idCategory INTEGER(11),
+	documentValid INTEGER(11),
+	message VARCHAR(255)
+)
+CREATE TABLE Rm(
+	nameRm VARCHAR(255),
+	numberRm INTEGER,
+	serieRm CHAR(12),
+	raRm INTEGER,
+	idUser INTEGER(11),
+	idCategory INTEGER(11),
+	documentValid INTEGER(11),
+	message VARCHAR(255) 
+)
+CREATE TABLE Ctps(
+	nameCtps VARCHAR(255),
+	pis VARCHAR(255),
+	numberCtps INTEGER,
+	serieCtps VARCHAR(255),
+	ufCtps VARCHAR(255),
+	imgCtps VARCHAR(255),
+	idUser INTEGER,
+	idCategory INTEGER(11),
+	documentValid INTEGER(11),
+	message VARCHAR(255) 
+)
+
