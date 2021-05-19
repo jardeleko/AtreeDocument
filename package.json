@@ -396,6 +396,7 @@
       "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-5.1.0.tgz",
       "version": "5.1.0"
     },
+    "crypto": "^1.0.1",
     "crypto-js": "^3.1.9-1",
     "crypto-random-string": {
       "integrity": "sha1-ojD2T1aDEOFJgAmUB5DsmVRbyn4=",
@@ -555,7 +556,7 @@
     "express": "^4.17.1",
     "express-flash": "0.0.2",
     "express-handlebars": "^3.1.0",
-    "express-session": "^1.17.0",
+    "express-session": "^1.17.1",
     "extend-shallow": {
       "dependencies": {
         "is-extendable": {
@@ -1628,7 +1629,7 @@
       "version": "2.0.0"
     },
     "multer": "^1.4.2",
-    "mysql": "^2.17.1",
+    "mysql": "^2.18.1",
     "mysql2": "^1.7.0",
     "nan": {
       "integrity": "sha512-TghvYc72wlMGMVMluVo9WRJc0mB8KxxF/gZ4YYFy7V2ZQX9l7rgbPg7vjS9mt6U5HXODVFVI2bOduCzwOMv/lw==",
@@ -1759,7 +1760,7 @@
       "resolved": "https://registry.npmjs.org/pascalcase/-/pascalcase-0.1.1.tgz",
       "version": "0.1.1"
     },
-    "passport": "^0.4.0",
+    "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "path-dirname": {
       "integrity": "sha1-zDPSTVJeCZpTiMAzbG4yuRYGCeA=",
@@ -1984,7 +1985,7 @@
       "resolved": "https://registry.npmjs.org/send/-/send-0.16.2.tgz",
       "version": "0.16.2"
     },
-    "sequelize": "^5.21.2",
+    "sequelize": "^5.22.4",
     "serve-static": {
       "integrity": "sha512-p/tdJrO4U387R9oMjb1oj7qSMaMfmOyd4j9hOFoxZe2baQszgHcSWjuya/CiT5kgZZKRudHNOA0pYXOl8rQ5nw==",
       "requires": {

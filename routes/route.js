@@ -19,6 +19,7 @@ const {iAdmin} = require('./protected');
 
 //bodyParser e middlewares
 	router.use(methodOverride('_method'))
+	//tecnicas antigas bodyparser
 	router.use(bodyParser.urlencoded({extended: false}))
 	router.use(bodyParser.json())
 //iniciando session
@@ -115,6 +116,7 @@ router.get('/logout', (req, res, next) => {
 })
 //create users
 router.post('/add',(req, res) => {
+	console.log(req.body.name_sign);
 	let erros = []
 
 	if(!req.body.name_sign || typeof req.body.name_sign == undefined || req.body.name_sign == null){
