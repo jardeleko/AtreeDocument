@@ -1262,7 +1262,7 @@
       "resolved": "https://registry.npmjs.org/http-errors/-/http-errors-1.6.3.tgz",
       "version": "1.6.3"
     },
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "iconv-lite": {
       "integrity": "sha512-neyTUVFtahjf0mB3dZT77u+8O0QB89jFdnBkd5P1JgYPbPaia3gXXOVL2fq8VyU2gMMD7SaN7QukTB/pmXYvDA==",
       "requires": {
